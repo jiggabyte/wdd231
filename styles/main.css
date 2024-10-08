@@ -89,7 +89,7 @@ main {
     background-color: #2f5061;
     padding: 10px;
     margin-bottom: 0;    
-    max-width: auto;
+    width: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
