@@ -1,4 +1,6 @@
 /* Global styles */
+
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -15,8 +17,9 @@ h1, h2 {
 /* Header styles */
 header {
     background-color: #2f5061;
-    padding: 1rem;
+    padding: 1rem 0 0 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -29,7 +32,7 @@ header {
 .profile-img {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-right: 1rem;
 }
 
@@ -37,14 +40,22 @@ h1 {
     color: white;
 }
 
+nav {
+    width: 100%;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
     margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
 }
 
 .nav-menu li {
-    margin-right: 1.5rem;
+    margin: 1rem 1.5rem 1rem 1.5rem;
 }
 
 .nav-menu a {
@@ -73,19 +84,39 @@ main {
     padding: 2rem;
 }
 
+
+.course-work div, .highlighted-location div, .certificate-title {
+    background-color: #2f5061;
+    padding: 10px;
+    margin-bottom: 0;    
+    max-width: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.course-work h2, .highlighted-location h2, .certificate-title h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
 .course-work, .highlighted-location, .certificate {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-bottom: 1rem;
     width: 100%;
     max-width: 500px;
 }
 
 .highlighted-location img {
-    width: 100%;
-    height: auto;
+    display: block;
+    width: 50%;
+    height: 70%;
+    margin: 20px auto;
     border-radius: 8px;
+}
+
+.highlighted-location p {
+    text-align: center;
 }
 
 /* Certificate section */
@@ -96,17 +127,19 @@ main {
 }
 
 button {
-    padding: 0.5rem 1rem;
-    background-color: #2f5061;
+    padding: 0.5rem 2.5rem;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .course-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
 .course-list div {
@@ -120,7 +153,7 @@ button {
 
 /* Completed courses */
 .completed {
-    background-color: #aaa;
+    background-color: green;
 }
 
 /* Footer styles */
@@ -147,6 +180,10 @@ footer img {
     .nav-menu {
         flex-direction: column;
         display: none;
+    }
+
+    ul {
+        padding-left: 0!important;
     }
 
     .nav-menu.active {
