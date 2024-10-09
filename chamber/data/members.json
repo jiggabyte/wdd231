@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Owerri Hotels & Suites",
+      "address": "No. 12 Wetheral Road, Owerri, Imo State",
+      "phone": "+234 812 345 6789",
+      "website": "http://www.owerrihotels.com",
+      "image": "owerri_hotels.jpg",
+      "membership_level": 3,
+      "description": "Luxury accommodations with conference facilities and a 5-star restaurant."
+    },
+    {
+      "name": "Alvan Motors",
+      "address": "Plot 25, Port Harcourt Road, Owerri, Imo State",
+      "phone": "+234 806 543 2198",
+      "website": "http://www.alvanmotors.com",
+      "image": "alvan_motors.jpg",
+      "membership_level": 2,
+      "description": "Car dealership specializing in new and used cars, with financing options."
+    },
+    {
+      "name": "Imo Delight Restaurant",
+      "address": "No. 5 Tetlow Road, Owerri, Imo State",
+      "phone": "+234 907 654 3210",
+      "website": "http://www.imodelight.com",
+      "image": "imo_delight.jpg",
+      "membership_level": 1,
+      "description": "A popular local restaurant serving traditional Nigerian dishes and continental meals."
+    },
+    {
+      "name": "Success Tech Hub",
+      "address": "Suite B12, Owerri Mall, Owerri, Imo State",
+      "phone": "+234 818 234 5670",
+      "website": "http://www.successtechhub.com",
+      "image": "success_tech.jpg",
+      "membership_level": 3,
+      "description": "Tech startup incubator offering coworking spaces and business mentorship programs."
+    },
+    {
+      "name": "New Age Supermarket",
+      "address": "No. 23 Douglas Road, Owerri, Imo State",
+      "phone": "+234 905 432 1890",
+      "website": "http://www.newagesupermarket.com",
+      "image": "new_age_supermarket.jpg",
+      "membership_level": 2,
+      "description": "Retail store offering a wide range of household products, groceries, and electronics."
+    },
+    {
+      "name": "Owerri Fashion House",
+      "address": "Shop 10, Imo Plaza, Owerri, Imo State",
+      "phone": "+234 706 987 4321",
+      "website": "http://www.owerrifashion.com",
+      "image": "owerri_fashion.jpg",
+      "membership_level": 1,
+      "description": "A boutique fashion store showcasing locally designed and international fashion collections."
+    },
+    {
+      "name": "Greenfield Farms",
+      "address": "Km 5, Aba Road, Owerri, Imo State",
+      "phone": "+234 701 234 8765",
+      "website": "http://www.greenfieldfarms.com",
+      "image": "greenfield_farms.jpg",
+      "membership_level": 3,
+      "description": "Agribusiness focused on poultry farming, crop production, and food processing."
+    }
+  ]
+  

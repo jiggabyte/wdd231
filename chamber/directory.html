@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Owerri Chamber of Commerce - Business Directory">
+    <meta name="author" content="Sixtus Onumajuru">
+    <title>Owerri Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Owerri Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jiggabyte.github.io/wdd231/chamber/images/Owerri.jpg">
+    <meta property="og:url" content="https://jiggabyte.github.io/wdd231/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/logo.png" alt="Owerri chamber of commerce logo">
+            
+            <div>
+                <h1>Owerri Chamber of Commerce</h1>
+                <p> Ubi Minister Ibi Laetitia.</p>
+            </div>
+        </div>
+
+        <span id="menuBtn"></span>
+
+        <br><br><br><br><br><br>
+       
+        <nav>
+            <ul id="listNav">
+                <li class="active"><a href="directory.html">Home</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu">
+            <button id="grid"><img src="images/arrange.png" alt="grid button image" border="0"></button>
+            <button id="list"><img src="images/list.png" alt="list button image" border="0"></button>
+        </section>
+        <hr>
+        <article class="grid" id="business-directory"></article>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Owerri Chamber of Commerce. All rights reserved.</p>
+        <p>Sixtus Onumajuru | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</body>
+
+</html>
