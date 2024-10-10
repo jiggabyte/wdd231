@@ -12,9 +12,9 @@ menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('open');
     if (listNav.style.display === "flex") {
         listNav.style.display = "none"; // Hide menu
-      } else {
+    } else {
         listNav.style.display = "flex"; // Show menu
-      }
+    }
 });
 
 const capitalizeWords = (str) => {
@@ -24,20 +24,27 @@ const capitalizeWords = (str) => {
 // API URL with latitude and longitude of Trier, Germany
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=5.50&lon=7.04&units=metric&appid=c5ffeefd89e2d92b78c974bdeeb0343f';
 
+const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=5.50&lon=7.04&units=metric&appid=c5ffeefd89e2d92b78c974bdeeb0343f';
+
+
 // Async function to fetch weather data
-const apiFetch = async () => {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data); // testing only
-      displayResults(data); // Uncomment to display data on the page
-    } else {
-      throw Error(await response.text());
+const apiFetch = async (urlData, call_type = false) => {
+    try {
+        const response = await fetch(urlData);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only     
+            if (call_type) {
+                displayForecastResults(data); // Uncomment to display data on the page
+            } else {
+                displayResults(data); // Uncomment to display data on the page
+            }
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
     }
-  } catch (error) {
-    console.log(error);
-  }
 }
 
 // Function to display results
@@ -46,13 +53,35 @@ const displayResults = (data) => {
     document.getElementById('weather-description').innerText = data.weather.map(event => capitalizeWords(event.description)).join(", ");
 }
 
+// Function to display forecast results
+const displayForecastResults = (data) => {
+    let tempData = [];
+    let tempItem = "";
+    data.list.forEach((item) => {
+        if(tempItem != item.dt_txt.slice(0,11)){
+            tempItem = item.dt_txt.slice(0,11);
+            if(tempData.length < 3){
+                tempData.push(item);
+            }   
+        }
+    });
+
+    document.getElementById('forecast').innerHTML = `
+    <p>Date: ${tempData[0].dt_txt.slice(0,11)}<span>Temperature: ${tempData[0].main.temp}</span></p>
+    <p>Date: ${tempData[1].dt_txt.slice(0,11)}<span>Temperature: ${tempData[1].main.temp}</span></p>
+    <p>Date: ${tempData[2].dt_txt.slice(0,11)}<span>Temperature: ${tempData[2].main.temp}</span></p>    
+    `;
+}
+
 getRandomMembers = (arr, num) => {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, num);
 }
 
 // Call the function to fetch and display weather
-apiFetch();
+apiFetch(url);
+
+apiFetch(urlForecast, true);
 
 
 // Fetching the member data from the JSON file
