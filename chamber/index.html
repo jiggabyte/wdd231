@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Owerri Chamber of Commerce - Business Directory">
+    <meta name="author" content="Sixtus Onumajuru">
+    <title>Owerri Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Owerri Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jiggabyte.github.io/wdd231/chamber/images/Owerri.jpg">
+    <meta property="og:url" content="https://jiggabyte.github.io/wdd231/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/logo.png" alt="Owerri chamber of commerce logo">
+            
+            <div>
+                <h1>Owerri Chamber of Commerce</h1>
+                <p> Ubi Minister Ibi Laetitia.</p>
+            </div>
+        </div>
+
+        <span id="menuBtn"></span>
+
+        <br><br><br><br><br><br>
+       
+        <nav>
+            <ul id="listNav">
+                <li class="active"><a href="directory.html">Home</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+    <section class="hero">
+       
+        <img src="images/hero.jpeg" alt="Owerri City">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Welcome to the Owerri Chamber of Commerce</h1>
+            <p>Supporting local businesses and promoting growth in Owerri</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Event 1 - Date</li>
+            <li>Event 2 - Date</li>
+            <!-- Add more events -->
+        </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+        <h2>Current Weather in Owerri</h2>
+        <p id="current-temperature">Loading...</p>
+        <p id="weather-description">Loading...</p>
+        <div id="forecast">
+            <!-- 3-day forecast goes here -->
+        </div>
+    </section>
+
+    <!-- Company Spotlight Section -->
+    <section class="spotlights">
+        <h2>Featured Members</h2>
+        <div class="spotlight-container">
+            <!-- Spotlighted companies will be injected here using JavaScript -->
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Owerri Chamber of Commerce. All rights reserved.</p>
+        <p>Sixtus Onumajuru | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>
