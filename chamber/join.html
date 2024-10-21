@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Owerri Chamber of Commerce - Business Directory">
+    <meta name="author" content="Sixtus Onumajuru">
+    <title>Owerri Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Owerri Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jiggabyte.github.io/wdd231/chamber/images/Owerri.jpg">
+    <meta property="og:url" content="https://jiggabyte.github.io/wdd231/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/logo.png" alt="Owerri chamber of commerce logo">
+
+            <div>
+                <h1>Owerri Chamber of Commerce</h1>
+                <p> Ubi Minister Ibi Laetitia.</p>
+            </div>
+        </div>
+
+        <span id="menuBtn"></span>
+
+        <br><br><br><br><br><br>
+
+        <nav>
+            <ul id="listNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="member-cards member-form">
+
+            <h1>Join the Owerri Chamber of Commerce</h1>
+            <form action="thankyou.html" method="get">
+                <!-- First Name Field -->
+                <label for="first-name">First Name: *
+                    <input type="text" id="first-name" name="first-name" title="Enter your first name"
+                        autocomplete="given-name" required>
+                </label>
+
+                <!-- Last Name Field -->
+                <label for="last-name">Last Name: *
+                    <input type="text" id="last-name" name="last-name" title="Enter your last name"
+                        autocomplete="family-name" required>
+                </label>
+
+                <!-- Organizational Title -->
+                <label for="org-title">Organization Title: *
+                    <input type="text" id="org-title" name="org-title" title="Enter your title within the organization"
+                        autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" maxlength="7" required>
+                </label>
+
+                <!-- Email Address -->
+                <label for="email">Email Address: *
+                    <input type="email" id="email" name="email" title="Enter a valid email address" autocomplete="email"
+                        placeholder="example@domain.com" required>
+                </label>
+
+                <!-- Mobile Phone -->
+                <label for="phone">Mobile Phone Number: *
+                    <input type="tel" id="phone" name="phone" title="Enter your mobile number" autocomplete="tel"
+                        required>
+                </label>
+
+                <!-- Organization Name -->
+                <label for="organization">Organization Name: *
+                    <input type="text" id="organization" name="organization" title="Enter the name of your organization"
+                        autocomplete="organization" required>
+                </label>
+
+                <!-- Membership Level -->
+                <label for="membership-level">Membership Level: *
+                    <select id="membership-level" name="membership-level" required>
+                        <option value="NP">NP Membership (Non-profit)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <!-- Organization Description -->
+                <label for="description">Business/Organization Description:
+                    <textarea id="description" name="description"
+                        title="Describe your business/organization"></textarea>
+                </label>
+
+                <!-- Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Join Now">
+            </form>
+
+        </div>
+
+        <div class="member-cards member-dialog">
+
+            <!-- Membership Level Cards and Modals -->
+            <section id="membership-cards">
+                <!-- NP Membership Card -->
+                <div class="card">
+                    <h2>NP Membership</h2>
+                    <p>Non-profit organizations</p>
+                    <a href="#np-modal">Learn More</a>
+                </div>
+
+                <!-- Bronze Membership Card -->
+                <div class="card">
+                    <h2>Bronze Membership</h2>
+                    <p>Small businesses</p>
+                    <a href="#bronze-modal">Learn More</a>
+                </div>
+
+                <!-- Silver Membership Card -->
+                <div class="card">
+                    <h2>Silver Membership</h2>
+                    <p>Medium-sized businesses</p>
+                    <a href="#silver-modal">Learn More</a>
+                </div>
+
+                <!-- Gold Membership Card -->
+                <div class="card">
+                    <h2>Gold Membership</h2>
+                    <p>Large businesses</p>
+                    <a href="#gold-modal">Learn More</a>
+                </div>
+            </section>
+
+            <!-- NP Modal -->
+            <div id="np-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>NP Membership Benefits</h2>
+                    <p>No fee, access to basic resources, event invitations, and more.</p>
+                </div>
+            </div>
+
+            <!-- Bronze Modal -->
+            <div id="bronze-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Bronze Membership Benefits</h2>
+                    <p>Access to events, networking opportunities, and discounted training programs.</p>
+                </div>
+            </div>
+
+            <!-- Silver Modal -->
+            <div id="silver-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Silver Membership Benefits</h2>
+                    <p>All Bronze benefits, plus priority event invitations, and advertising support.</p>
+                </div>
+            </div>
+
+            <!-- Gold Modal -->
+            <div id="gold-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Gold Membership Benefits</h2>
+                    <p>All Silver benefits, plus premium advertising spots, personalized business support, and VIP
+                        access to
+                        events.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Owerri Chamber of Commerce. All rights reserved.</p>
+        <p>Sixtus Onumajuru | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>

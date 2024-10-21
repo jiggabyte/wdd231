@@ -19,7 +19,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -40,21 +40,25 @@
         <nav>
             <ul id="listNav">
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="menu">
-            <button id="grid"><img src="images/arrange.png" alt="grid button image" border="0"></button>
-            <button id="list"><img src="images/list.png" alt="list button image" border="0"></button>
-        </section>
-        <hr>
-        <article class="grid" id="business-directory"></article>
+    <main class="thank-you">
+        `
+        <h1>Thank You for Joining!</h1>
+        <p>Thank you, <strong>${first-name}</strong> <strong>${last-name}</strong>, for joining the Owerri Chamber
+            of Commerce.</p>
+        <p>Your email: <strong>${email}</strong></p>
+        <p>Your mobile: <strong>${phone}</strong></p>
+        <p>Your business name: <strong>${organization}</strong></p>
+        <p>Submitted on: <strong>${timestamp}</strong></p>
+        `
     </main>
+
 
     <footer>
         <p>&copy; <span id="currentYear"></span> Owerri Chamber of Commerce. All rights reserved.</p>
@@ -62,7 +66,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 
 </html>

@@ -55,21 +55,22 @@ const displayResults = (data) => {
 
 // Function to display forecast results
 const displayForecastResults = (data) => {
+    if (!data) return;
     let tempData = [];
     let tempItem = "";
     data.list.forEach((item) => {
-        if(tempItem != item.dt_txt.slice(0,11)){
-            tempItem = item.dt_txt.slice(0,11);
-            if(tempData.length < 3){
+        if (tempItem != item.dt_txt.slice(0, 11)) {
+            tempItem = item.dt_txt.slice(0, 11);
+            if (tempData.length < 3) {
                 tempData.push(item);
-            }   
+            }
         }
     });
 
     document.getElementById('forecast').innerHTML = `
-    <p>Date: ${tempData[0].dt_txt.slice(0,11)}<span>Temperature: ${tempData[0].main.temp}</span></p>
-    <p>Date: ${tempData[1].dt_txt.slice(0,11)}<span>Temperature: ${tempData[1].main.temp}</span></p>
-    <p>Date: ${tempData[2].dt_txt.slice(0,11)}<span>Temperature: ${tempData[2].main.temp}</span></p>    
+    <p>Date: ${tempData[0].dt_txt.slice(0, 11)}<span>Temperature: ${tempData[0].main.temp}</span></p>
+    <p>Date: ${tempData[1].dt_txt.slice(0, 11)}<span>Temperature: ${tempData[1].main.temp}</span></p>
+    <p>Date: ${tempData[2].dt_txt.slice(0, 11)}<span>Temperature: ${tempData[2].main.temp}</span></p>    
     `;
 }
 
@@ -90,6 +91,8 @@ const loadMembers = async () => {
     const members = await response.json();
 
     const spotlightDiv = document.querySelector('.spotlight-container');
+
+    if (!spotlightDiv) return;
     spotlightDiv.innerHTML = ''; // Clear previous content
 
     const goldSilverMembers = members.filter(member => member.membership_level === 3 || member.membership_level === 2);
@@ -110,3 +113,81 @@ const loadMembers = async () => {
 
 
 loadMembers();
+
+window.addEventListener('load', function () {
+    document.getElementById('membership-cards')?.classList.add('card-loaded');
+});
+
+if (document.getElementById('timestamp')) {
+    document.getElementById('timestamp').value = new Date().toISOString();
+}
+
+
+
+// Script for modals
+document.querySelectorAll('.card a').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var modalId = this.getAttribute('href');
+        document.querySelector(modalId).style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.modal .close').forEach(function (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+// Close modal on clicking outside of the modal content
+window.addEventListener('click', function (e) {
+    document.querySelectorAll('.modal').forEach(function (modal) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+const formUrl = window.location.href;
+
+const formArr = formUrl.split('?')[1].split('&');
+
+const thanks = document.querySelector('.thank-you');
+
+if (thanks) {
+    let firstName = '';
+    let lastName = '';
+    let email = '';
+    let phone = '';
+    let organization = '';
+    let timestamp = '';
+
+    formArr.forEach(
+        data => {
+            console.log(data);
+            if (data.startsWith('first')) {
+                firstName = data.split('=')[1];
+            } else if (data.startsWith('last')) {
+                lastName = data.split('=')[1];
+            } else if (data.startsWith('email')) {
+                email = data.split('=')[1].replace('%40', '@');
+            } else if (data.startsWith('phone')) {
+                phone = data.split('=')[1].replace('%2B', '+');
+            } else if (data.startsWith('organization')) {
+                organization = data.split('=')[1];
+            } else if (data.startsWith('timestamp')) {
+                timestamp = data.split('=')[1].replaceAll('%3A', ' ');
+            }
+
+        }
+    );
+    thanks.innerHTML = `
+    <h1>Thank You for Joining!</h1>
+    <p>Thank you, <strong>${firstName}</strong> <strong>${lastName}</strong>, for joining the Owerri Chamber
+        of Commerce.</p>
+    <p>Your email: <strong>${email}</strong></p>
+    <p>Your mobile: <strong>${phone}</strong></p>
+    <p>Your business name: <strong>${organization}</strong></p>
+    <p>Submitted on: <strong>${timestamp}</strong></p>
+    ` ;
+}
