@@ -150,7 +150,7 @@ window.addEventListener('click', function (e) {
 
 const formUrl = window.location.href;
 
-const formArr = formUrl.split('?')[1].split('&');
+const formArr = formUrl?.split('?')[1]?.split('&');
 
 const thanks = document.querySelector('.thank-you');
 
