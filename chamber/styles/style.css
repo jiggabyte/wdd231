@@ -304,7 +304,7 @@ input[type="submit"]:hover {
     flex: 1 1 calc(25% - 1em);
     min-width: 250px;
     text-align: center;    
-    transition: animation-delay 60s transform 0.3s ease 30s, box-shadow 0.3s ease 30s;
+    transition: animation-delay 60s, transform 0.3s ease 30s, box-shadow 0.3s ease 30s;
 }
 
 .card h2 {
