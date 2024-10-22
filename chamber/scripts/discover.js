@@ -1,4 +1,5 @@
 // Lazy Loading Images
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll("img.lazy");
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(img);
     });
 });
+*/
 
 // LocalStorage Visit Tracking
 document.addEventListener("DOMContentLoaded", function () {
