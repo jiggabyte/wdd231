@@ -371,7 +371,7 @@ input[type="submit"]:hover {
 main.thank-you {
     text-align: center;
     padding: 2em;
-    height: 100vh;
+    height: 100%;
 }
 
 main.thank-you p {
