@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Owerri Chamber of Commerce - Business Directory">
+    <meta name="author" content="Sixtus Onumajuru">
+    <title>Owerri Chamber of Commerce - Business Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Owerri Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jiggabyte.github.io/wdd231/chamber/images/Owerri.jpg">
+    <meta property="og:url" content="https://jiggabyte.github.io/wdd231/chamber/discover.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/logo.png" alt="Owerri chamber of commerce logo">
+
+            <div>
+                <h1>Owerri Chamber of Commerce</h1>
+                <p> Ubi Minister Ibi Laetitia.</p>
+            </div>
+        </div>
+
+        <span id="menuBtn"></span>
+
+        <br><br><br><br><br><br>
+
+        <nav>
+            <ul id="listNav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- CSS Grid Layout -->
+        <section class="grid-container">
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <h2>Sidebar Information</h2>
+                <p id="visit-message"></p>
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Business Expo - Nov 15</li>
+                    <li>Networking Gala - Dec 1</li>
+                    <li>Trade Fair - Jan 10</li>
+                </ul>
+            </aside>
+
+            <!-- Main Content Area with Lazy Loading Images -->
+            <section class="gallery">
+                <h2>Local Attractions</h2>
+                <div class="photo-grid">
+                    <figure>
+                        <img data-src="images/owerri1.jpeg" alt="Image 1" loading="lazy" class="lazy">
+                        <figcaption>Attraction 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img data-src="images/owerri2.jpeg" alt="Image 2" loading="lazy" class="lazy">
+                        <figcaption>Attraction 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img data-src="images/owerri3.jpeg" alt="Image 3" loading="lazy" class="lazy">
+                        <figcaption>Attraction 3</figcaption>
+                    </figure>
+                    <figure>
+                        <img data-src="images/owerri4.jpeg" alt="Image 4" loading="lazy" class="lazy">
+                        <figcaption>Attraction 4</figcaption>
+                    </figure>
+                    <figure>
+                        <img data-src="images/owerri5.jpeg" alt="Image 5" loading="lazy" class="lazy">
+                        <figcaption>Attraction 5</figcaption>
+                    </figure>
+                    <figure>
+                        <img data-src="images/owerri6.jpeg" alt="Image 6" loading="lazy" class="lazy">
+                        <figcaption>Attraction 6</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Owerri Chamber of Commerce. All rights reserved.</p>
+        <p>Sixtus Onumajuru | WDD 231 | Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+</body>
+
+</html>
